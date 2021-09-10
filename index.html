@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+<header class="header">
+  <img class="header--img" src="images/logo.svg" alt=Logotipo>
+</header>
+
+<section class="main">
+  <div class="main--form">
+    <div id="etiqueta_bill" class="main--etiqueta">
+      <p id="mensaje_error_bill_zero" class="mensaje_error bill_zero">Can't be zero</p>
+      <p id="bill">Bill</p>
+      <input class="input-icon-dollar input" id="inputBill" oninput="actualizar_bill()" placeholder="0" pattern="" type="number" alt="botonBill">
+    </div>
+    <div class="buttons" id="container_buttons">
+      <p>Select Tip %</p>
+      <button class="button" id="button_percentage_cinco" onclick="button_percentage(0.05);button_percentage_style(this)">5%</button>
+      <button class="button" id="button_percentage_diez" onclick="button_percentage(0.1);button_percentage_style(this)">10%</button>
+      <button class="button" id="button_percentage_quince" onclick="button_percentage(0.15);button_percentage_style(this)">15%</button>
+      <button class="button" id="button_percentage_veintiCinco" onclick="button_percentage(0.25);button_percentage_style(this)">25%</button>
+      <button class="button" id="button_percentage_cincuenta" onclick="button_percentage(0.5);button_percentage_style(this)">50%</button>
+      <input class="input-custom" id="input_custom" oninput="custom()" placeholder="Custom" type="number">
+    </div>
+    <div>
+      <p id="mensaje_error_people_zero" class="mensaje_error people_zero">Can't be zero</p>
+      <p>Number of People</p>
+      <input class="input-icon-person input" id="inputPeople" oninput="input_people()" placeholder="0" type="number" alt="botonPeople">
+    </div>
+  </div>
+  <div class="main--result">
+    <div class="main--result--tagContent">
+      <div>
+        <p class="main--reset--tagWhite">Tip amount</p>
+        <p class="main--reset--tagGray">/ person</p>
+      </div>
+      <p id="tip--amount" class="main--result--automatically">$0.00</p>
+    </div>
+    <div class="main--result--tagContent">
+      <div>
+        <p class="main--reset--tagWhite">Total</p>
+        <p class="main--reset--tagGray">/ person</p>
+      </div>
+      <p id="total" class="main--result--automatically">$0.00</p>
+    </div>
+    <div class="main--result--bootton--content">
+      <button class="main--result--botton--reset" id="button_reset" type="reset" onclick="button_reset()">RESET</button>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="">Brenda Barrios</a>.
+  </div>
+</footer>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
